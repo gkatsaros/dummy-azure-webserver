@@ -338,7 +338,6 @@ node_templates:
         reexecute: false
 
 outputs:
-
   endpoint:
     description: Web application endpoint
     value:
@@ -352,7 +351,6 @@ outputs:
     description: The Azure fqdn for the instance
     value:
       concat:
-      - 'http://'
       - { get_input: vm-fqdn}
       - '.'
       - { get_input: location }
