@@ -132,6 +132,8 @@ node_templates:
             inputs:
               commands:
                 - apt-get install -y python-dev nginx
+                - touch /var/www/alive.html
+                - echo "alive" > /var/www/alive.html
                # - nohup python -m SimpleHTTPServer 8080 > /dev/null 2>&1 &
               fabric_env:
                 host_string: { get_attribute: [host,public_ip]}
